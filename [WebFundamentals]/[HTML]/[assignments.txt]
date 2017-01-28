@@ -1,0 +1,32 @@
+[MEAN]			[Ruby]			[iOS]
+[Python]		[WebFendamentals]	[netCore]
+
+./[MEAN]:
+[about.txt]
+
+./[Python]:
+[about.txt]
+
+./[Ruby]:
+[about.txt]
+
+./[WebFendamentals]:
+[CSS]		[Git]		[HTML]		[JavaScript]	[about.txt]
+
+./[WebFendamentals]/[CSS]:
+[about.txt]
+
+./[WebFendamentals]/[Git]:
+[about.txt]
+
+./[WebFendamentals]/[HTML]:
+[about.txt]		[assignments.txt]	[indentation.html]
+
+./[WebFendamentals]/[JavaScript]:
+[about.txt]
+
+./[iOS]:
+[about.txt]
+
+./[netCore]:
+[about.txt]
