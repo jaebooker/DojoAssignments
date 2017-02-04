@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Weather</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('form').submit(function() {
+        var cityName = $("#weatherbar").val()
+        $.get("http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&&appid=550b9af84ded27dfcedb74ac990ac4b3", function(res) {
+          console.log(res);
+          var html_str = "";
+          var temp = res.main.temp;
+          var tempf = temp*(9/5)-459.67;
+          html_str += res.name +", "+res.sys.country;
+          html_str += "<ul><h2>"+res.weather["0"].description+"</h2></ul>";
+          html_str += "<ul> "+"Latitude " + res.coord.lat;
+          html_str += " "+"Longitude " + res.coord.lon +"</ul>";
+          html_str += "<ul>Humidity " + res.main.humidity + " </ul>";
+          html_str += "<ul>Temperature: " + tempf +" F</ul>";
+          $('h3').html(html_str);
+        }, 'json');
+        // don't forget to return false so the page doesn't refresh
+        return false;
+    });
+});
+</script>
+</head>
+<body>
+  <ul>Weather:
+  <form id= "form" action="">
+    <h3></h3>
+  <input id="weatherbar" type="text" placeholder="City"></ul>
+</body>
+</html>
