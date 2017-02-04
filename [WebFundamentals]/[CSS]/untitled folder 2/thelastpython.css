@@ -1,0 +1,234 @@
+/*CSS reset settings here*/
+/*
+*{
+ margin: 0px;
+ padding: 0px;
+}
+*/
+#wrapper{
+ width: 960px;
+ background-color: #265175;
+ margin: 0px auto;
+ padding: 20px;
+ height: 950px;
+
+}
+#header{
+ height: 125px;
+ width: 100%;
+ margin-bottom: 10px;
+ display: inline-block;
+ background-color: #265175;
+}
+#logo{
+  background-image: url("python.png");
+background-size: contain;
+  height: 100px;
+  width: 350px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 15px;
+  vertical-align: top;
+}
+#searchbar{
+  background-color: grey;
+  vertical-align: top;
+  height: 140px;
+  width: 275px;
+  display: inline-block;
+  border-radius: 20px;
+}
+#searchtext{
+  width: 100%;
+  height: 19px;
+  font-size: .8em;
+}
+#searchtext ul{
+    margin-left: 20px;
+}
+
+#searchtext ul li{
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+  }
+#searchblank{
+  width: 100%;
+  height: 65;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+#navibar{
+  height: 50px;
+  width: 100%;
+  margin: 10px;
+  display: block;
+  background-color: #3776ab;
+  border-radius: 20px;
+}
+#navibar ul{
+    text-decoration: none;
+}
+#navibar ul li{
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+#navibar ul li a{
+  color: white;
+}
+#navibarstuff{
+  height: 90%;
+  display: inline-block;
+
+}
+#navbarstuff li{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1.3em;
+    margin-top: 10px;
+    height: 55px;
+    font-weight: 300;
+}
+
+#navbarstuff li a{
+    text-decoration: none;
+    color: white;
+}
+
+#navigation{
+ height: 300px;
+ width: 200px;
+ display: inline-block;
+ vertical-align: top;
+ margin-left: 20px;
+
+}
+#navigation ul{
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 0;
+}
+
+#navigation up li:before{
+    content: "\00BB \0020";
+    color: #ffd343;
+}
+
+#navigation ul li{
+    /*border: 1px dotted red;*/
+    margin-bottom: 10px;
+}
+
+#navigation ul li a{
+    color: white;
+    font-weight: 100;
+}
+
+#main_content{
+ height: 300px;
+ width: 100%;
+ display: inline-block;
+ margin-top: 0px;
+ padding: 10px;
+}
+#evenmoremain{
+  height: 275px;
+  width: 600px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+#footer{
+ width: 100%;
+ background-color: white;
+ margin-left: 5px;
+ margin-top: 15px;
+ vertical-align: top;
+}
+.Noises{
+ display: inline-block;
+ border-top: 4px solid #75a8d3;
+ height: 200px;
+ width: 270px;
+ margin: 10px;
+ vertical-align: top;
+ padding-top: 5px;
+ padding-right: 105px;
+  padding-left: 20px;
+}
+.noises1 {
+margin-left: 60px;
+color: black;
+}
+.noises2 {
+margin-left: 20px;
+color: black;
+}
+.block1{
+  color: black;
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 60px;
+}
+.block2{
+  color: black;
+  display: inline-block;
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 10px;
+}
+#footer p {
+    font-size: .7em;
+    color: black;
+    display: inline;
+}
+#footer a {
+  color: #75a8d3;
+  font-size: .8em;
+  text-align: center;
+  vertical-align: text-top;
+}
+#footer ul li a{
+    color: #75a8d3;
+    text-decoration: none;
+}
+#footnote{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#265175, #3776ab);
+}
+#footnote ul{
+    text-decoration: none;
+}
+#footnote ul li{
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+}
+#footnote ul li a{
+  color: #89bae3;
+  text-decoration: none;
+}
+.rubble{
+  color: white;
+}
+.quotes{
+  color: #ffd343;
+  font-size: 20px;
+  font-style: italic;
+}
+.zen{
+  font-weight: lighter;
+  margin-top: 15px;
+  color: white;
+}
