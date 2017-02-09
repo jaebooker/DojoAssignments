@@ -1,0 +1,25 @@
+<DOCTYPE html>
+<html>
+<head><title>Casino (NO NINJAS)</title>
+</head>
+<body>
+  <h3>Monies: {{ session['counter'] }}</h3>
+<form action="/process_money" method="post"><h2>A stupid farm</h2><ul><h4>Not sure what else to say here. Pretty cheap and you probably won't find much... except the human bones buried by the cannibals next door.</h4></ul>
+  <input type="hidden" name="building" value="farm" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<form action="/process_money" method="post"><h2>The cave, remember your failer at the cave!</h2><ul><h4>The cave doesn't cost anything, and you might strike it rich... or die</h4></ul>
+  <input type="hidden" name="building" value="cave" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<form action="/process_money" method="post"><h2>Our house...</h2> <ul><h4>in the middle of the street (medium cost, medium risk, truly the middle way to go)</h4></ul>
+  <input type="hidden" name="building" value="our house in the middle of the street" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<form action="/process_money" method="post"><h2>BIG LEAGUE</h2><ul><h4>You could win bigly at the Casino... but you might also be playing with an empty hand. At any rate, the greatest, most luxurious casino isn't cheap... they charge $20 for a diet coke. I'm not trying to complain, but it was twenty bucks! And the waitress wanted a big tip, too. But enough about my bad decisions, time to make your own.</h4></ul>
+  <input type="hidden" name="building" value="casino" />
+  <input type="submit" value="Find Gold!"/>
+</form>
+<h2>{{ message }}</h2>
+</body>
+</html>
