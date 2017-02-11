@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Emails</title>
+</head>
+<body>
+  <!-- we can use the line below to see all of our data in our template -->
+
+<h1>These are emails!</h1>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+<!-- with all the data we can then construct a more structured output -->
+{% for email in all_emails: %}
+   <p>Email: {{ email['emails'] }}</p>
+   <p>{{ email['created_at'] }}</p>
+   <p>{{ email['updated_at'] }}</p>
+   <hr>
+{% endfor %}
+  <h2>Add Email</h2>
+  <form action='/emails' method='POST'>
+    <label for="emails">Email:<input type="text" name="emails" id="emails"></label>
+    <input type="submit" value="Add">
+  </form>
+</body>
+</html>
