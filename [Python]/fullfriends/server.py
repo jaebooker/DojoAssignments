@@ -48,7 +48,7 @@ def edit(id):
         mysql.query_db(query, data)
     return redirect('/')
 
-@app.route('/friends/<id>/retrieve', methods=['get'])
+@app.route('/friends/retrieve/<id>', methods=['get'])
 def update(id):
     query = "SELECT * from friends WHERE id = id"
     data = {
@@ -56,7 +56,7 @@ def update(id):
     }
     print 'stars**********************'
     mysql.query_db(query, data)
-    return render_template('index2.html'), redirect('/friends/<id>/edit')
+    return render_template('index2.html'), redirect('/friends/edit/<id>')
 #@app.route('friends/<id>/murder')
 #def murder(id):
     #pass
