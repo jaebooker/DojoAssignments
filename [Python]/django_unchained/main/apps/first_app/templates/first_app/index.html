@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  {% load staticfiles %}
+     <!-- The line above tells Django to be ready to listen for static files -->
+     <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body><h1><ul>Good morning, Starshine! It is currently</ul><ul>
+<div class="line"><span class="text html basic"><span>{{somekey}}</span></span></div></h1>
+</ul></body>
+</html>
