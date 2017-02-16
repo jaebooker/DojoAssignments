@@ -1,21 +1,13 @@
 from django.shortcuts import render, HttpResponse, redirect
-import random
-import string
 
-def yourMethodFromUrls(request):
-    if 'num' not in request.session:
-        request.session['num'] = 0
-    if 'count' not in request.session:
-        request.session['count'] = 1
+def survey1(request):
     return render(request,'first_app/index.html')
-def create(request):
-    stringletters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    newstring = ""
-    if request.method == 'POST':
-        for x in range(0, 20):
-            newstring += random.choice(stringletters)
-        request.session['num'] = newstring
-        request.session['count'] += 1
-        return redirect('/')
-    else:
-        return redirect('/')
+def survey2(request):
+    if request.method == "POST":
+        request.session['first_name'] = request.POST['first_name']
+        request.session['last_name'] = request.POST['last_name']
+        request.session['email'] = request.POST['email']
+        request.session['comments'] = request.POST['comments']
+    return redirect('/result')
+def survey3(request):
+    return render(request,'first_app/index2.html')
