@@ -4,16 +4,9 @@
   <meta charset="UTF-8">
   <title>Document</title>
   {% load staticfiles %}
-     <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+     <link rel="stylesheet" href="{% static 'first_app/css/style.css' %}"media="screen" title="no title"  charset="utf-8">
 </head>
 <body>
-        <form action='/survey' method='POST'>
-          {% csrf_token %}
-            First Name: <input type='text' name='first_name'>
-            Last Name: <input type='text' name='last_name'>
-            Email: <input type='text' name='email'>
-            Questions? Comments? Concerns? Rants? <input type='text' name='comments'>
-            <input type='submit' value='create user'>
-        </form>
+  <h2>Where my ninjas at?</h2>
 </body>
 </html>
