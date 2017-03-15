@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title>Emails</title>
+</head>
+<body>
+  <h2>Add Email</h2>
+  <form action='/emails' method='POST'>
+    {% csrf_token %}
+    <label for="email">Email:<input type="text" name="email" id="email"></label>
+    <input type="submit" value="Add">
+  </form>
+</body>
+</html>

@@ -1,25 +1,13 @@
+# Inside your app's models.py file
 from __future__ import unicode_literals
 from django.db import models
-
-#class User(models.Model):
-  #first_name = models.CharField(max_length=25)
-  #last_name = models.CharField(max_length=25)
-  #age = models.IntegerField()
-  #created_at = models.DateTimeField(auto_now_add=True)
-  #updated_at = models.DateTimeField(auto_now=True)
-  #def __str__(self):
-    #return self.first_name + " " + self.last_name
-
-class Post(models.Model):
-    title = models.CharField(max_length=30)
-    message = models.TextField(max_length=2000)
-    #user_id = models.ForeignKey(User)
+class Course(models.Model):
+    title = models.CharField(max_length=45)
+    description = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
-class Comment(models.Model):
-    post = models.ForeignKey(Post)
-    comment = models.TextField(max_length=500)
-    #user_id = models.ForeignKey(User)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # *************************
+    # Connect an instance of UserManager to our User model overwriting
+    # the old hidden objects key with a new one with extra properties!!!
+    #objects = UserManager()
+    # *************************
