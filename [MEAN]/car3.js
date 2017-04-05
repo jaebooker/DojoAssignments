@@ -1,31 +1,33 @@
-function CarConstructor(name, wheels, passangers,speed,move) {
+function CarConstructor(name, wheels, passangers,speed) {
+  if (!(this instanceof CarConstructor)){
+  return new CarConstructor(name,wheels,passengers, speed);
+}
   this.name = name;
   this.wheels = wheels;
   this.passangers = passangers;
   this.speed = speed;
-  this.honk = function() {
+  this.distance = 0;
+}
+CarConstructor.prototype.distanceTravelled = function(){
+  this.distance = this.speed;
+  console.log(this.distance);
+}
+  CarConstructor.prototype.honk = function() {
     console.log("Honk! Honk!");
   }
-  var distance = 0;
-  var self = this;
-  var distanceTravelled = function(){
-    distance = self.speed;
-    console.log(distance);
-  }
-  this.moveV = function() {
-    distanceTravelled()
+  CarConstructor.prototype.moveV = function() {
+    this.distanceTravelled()
     this.honk()
   }
-  this.check = function(){
-    console.log(distance)
+  CarConstructor.prototype.check = function(){
+    console.log(this.distance)
   }
-}
 
 
                       // Create new car
 var Sudan = new CarConstructor("Sudan", 4, 5,40);
 Sudan.honk();
-var bus = new CarConstructor("Bus", 6, 100,"If your gonna do speed, move to the back");
+var bus = new CarConstructor("Bus", 6, 100,"If your gonna do speed, at least share it");
 bus.honk();
                       // Create bike
 var bike = new CarConstructor("Bike", 2,2,8);
@@ -45,7 +47,8 @@ bus.Numpassangers = function(num) {
 }
 bus.Numpassangers(32)
 console.log(bus.passangers);
+bus.moveV();
+bus.check();
 bus.Numpassangers(5000);
 console.log(bus.passangers);
-bus.moveV();
 bus.check();
