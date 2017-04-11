@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+  <html>
+<head>
+  <title></title>
+</head>
+<body>
+  <% if(typeof(user) != 'undefined' ) { %>
+  <% for (var i in user) { %>
+    <ul>
+   <h4><%= user[i].quote %><h5> -<%= user[i].name %></h5></h4></ul>
+  <% } %>
+<% } %>
+</body>
+</html>
