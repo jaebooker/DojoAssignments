@@ -1,0 +1,38 @@
+<html ng-app='myApp'>
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js'></script>
+    <script type='text/javascript'>
+      var myAppModule = angular.module('myApp', []);
+      // the .controller() method adds a controller to the module
+      myAppModule.controller('studentsController', function ($scope){
+          $scope.students = [
+            {name: 'Michael', lname: 'Choi', flang: 'Angular'}
+          ];
+          $scope.addStudent = function (){
+    // add to the array
+    $scope.students.push($scope.newStudent);
+    // clear the form values
+    $scope.newStudent = {};
+}
+$scope.delete = function (){
+  $scope.students.pop($scope.newStudent);
+}
+      });
+    </script>
+  </head>
+<body>
+  <div ng-controller='studentsController'>
+    <center><h3>Add</h3>
+<form>
+Name: <input type='text' ng-model='newStudent.name'>
+Last Name: <input type='text' ng-model='newStudent.lname'>
+Fav Language: <input type='text' ng-model='newStudent.flang'>
+<input type='submit' value='add new student' ng-click='addStudent()'>
+</form></center>
+    <ul>
+        <li ng-repeat="student in students">{{ student.name }},{{ student.lname }}, {{ student.flang }}</li>
+        <button ng-click = "delete();">Destroy</button>
+    </ul>
+  </div>
+</body>
+</html>
