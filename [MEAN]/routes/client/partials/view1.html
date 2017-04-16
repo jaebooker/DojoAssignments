@@ -1,0 +1,13 @@
+<div ng-controller="view1Controller">
+      <center><h3>Add</h3>
+  <form>
+  Name: <input type='text' ng-model='newProduct.name'>
+  Price: <input type='text' ng-model='newProduct.price'>
+  <input type='submit' value='add product' ng-click='addProduct()'>
+  </form></center>
+      <ul>
+          <li ng-repeat="p in products track by $index">{{ p.name }},{{ p.price }}
+          <button ng-click = "delete(p);">Destroy</button></li>
+      </ul>
+
+</div>
