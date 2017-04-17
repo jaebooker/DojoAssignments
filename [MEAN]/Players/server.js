@@ -9,6 +9,7 @@ var path = require("path");
 
 //This line allows our routing to find the static folder directly
 app.use(express.static(path.join(__dirname, "./client")));
+app.use(express.static(path.join(__dirname, "./bower_components")));
 //Tells our server to listen on port 8000
 app.listen(8000, function(){
    console.log("Listening on port 8000");
